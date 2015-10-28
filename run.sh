@@ -44,4 +44,6 @@ then
   echo "Configuration complete."
 fi
 
+sed -i 's/REPLACE_DB_PASSWORD/'${DB_PASSWORD}'/' /srv/bigfastblog/public/wp-config.php
+
 exec "$@"
